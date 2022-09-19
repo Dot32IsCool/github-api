@@ -15,7 +15,7 @@ fetch('https://api.github.com/users/Dot32IsCool/repos?per_page=100')
 		let div = document.createElement('div');
 		div.innerHTML = `
 			<h3>
-				<span class="count">${index}.</span> ${capitalizeFirstLetter(repo.name.replaceAll("-", " "))}
+				<span class="count">${index}.</span> <a target="blank" href="${repo.html_url}">${capitalizeFirstLetter(repo.name.replaceAll("-", " "))}</a>
 			</h3> 
 			<p>⭐️ ${repo.stargazers_count} stars</p>
 			<p>${capitalizeFirstLetter(repo.description)}</p> 
