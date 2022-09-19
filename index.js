@@ -1,8 +1,6 @@
 let main = document.querySelector('main');
 main.innerHTML = "Getting informatgion from the Github API";
 
-let repos = [];
-
 fetch('https://api.github.com/users/Dot32IsCool/repos?per_page=100')
 .then(response => response.json())
 .then(data => {
