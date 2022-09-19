@@ -1,0 +1,10 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Sen', Arial, Helvetica, sans-serif;
+}
+
+.count {
+	font-size: 2em;
+	color: rgb(159, 43, 43);
+}
