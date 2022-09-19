@@ -13,7 +13,7 @@ fetch('https://api.github.com/users/Dot32IsCool/repos?per_page=100')
 	let index = 1
 	for (let repo of data) {
 		let div = document.createElement('div');
-		div.innerHTML = `<h3><span class="count">${index}.</span> ${capitalizeFirstLetter(repo.name.replaceAll("-", " "))}</h3> <p>${capitalizeFirstLetter(repo.description)}</p> <p>${repo.stargazers_count} stars, tags: ${repo.topics}</p>`;
+		div.innerHTML = `<h3><span class="count">${index}.</span> ${capitalizeFirstLetter(repo.name.replaceAll("-", " "))}</h3> <p>${capitalizeFirstLetter(repo.description)}</p> <p>${repo.stargazers_count} stars, tags: ${repo.topics.toString().replaceAll(",", ", ")}</p>`;
 		main.appendChild(div);
 		main.appendChild(document.createElement('hr'));
 		index++;
